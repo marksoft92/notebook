@@ -5,25 +5,28 @@ import Editor from './Editor.js';
 
 const Posts = ({ data, dataWorker, deleteItem, editWorker }) => {
 
-    if (dataWorker != undefined) {
-        dataWorker.map(worker => <Editor items={worker} />)
-    }
+    console.log("x", dataWorker)
+    const dupa = dataWorker.map(worker => <Editor dataWorker={worker} />)
+
+
 
 
     const tasks = data.map(task => <Result
         key={task.id}
         items={task}
         deleteItem={deleteItem}
-        editWorker={editWorker} />)
+        editWorker={editWorker}
+    />)
 
 
-
-    return (
+    return (<>
         <tbody>
 
             {tasks}
-        </tbody>
 
+        </tbody>
+        {dupa}
+    </>
     );
 }
 

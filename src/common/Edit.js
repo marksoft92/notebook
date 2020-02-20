@@ -5,7 +5,7 @@ const Edit = (props) => {
     const { id } = props.dataWorker
 
     return (
-        <Link to={"/edit"}>  <button onClick={() => props.editWorker(id)}>Edit</button></Link>
+        <button onClick={() => props.editWorker(id)}>Edit</button>
 
     )
 }

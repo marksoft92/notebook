@@ -7,7 +7,7 @@ import AddWorker from './AddWorker';
 
 const HomeApp = () => {
     const [data, setData] = useState([]);
-    const [worker, setWorker] = useState();
+    const [worker, setWorker] = useState([]);
     const [loading, setLoading] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
     const [dataPerPage, setDataPerPage] = useState(20);
@@ -50,6 +50,7 @@ const HomeApp = () => {
 
     }
 
+
     return (<div>
 
         <Link state={addWorker} to={"/add"}><button>Add new worker</button></Link>
@@ -68,6 +69,7 @@ const HomeApp = () => {
                 editWorker={editWorker}
                 dataWorker={worker} />
         </table>
+
         <Pagination dataPerPage={dataPerPage}
             totalData={data.length}
             paginate={paginate}

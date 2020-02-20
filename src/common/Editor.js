@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react';
 
-const Editor = ({ items }) => {
-    console.log('x', items)
+const Editor = (props) => {
+    console.log('x', props.dataWorker.id)
+
+    const { name, company, email, phone, address, about } = props.dataWorker
 
 
+    return (
 
-    return (<table>
-
-        <thead>
+        <><tbody>
             <tr>
-                <th>Id</th>
+
                 <th>Name</th>
                 <th>Company</th>
                 <th>Email</th>
@@ -17,17 +18,20 @@ const Editor = ({ items }) => {
                 <th>Address</th>
                 <th>about</th>
             </tr>
-        </thead>
-        <tbody>
+
+
             <tr>
 
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+
+                <td>{name}</td>
+                <td>{company}</td>
+                <td>{email}</td>
+                <td>{phone}</td>
+                <td>{address}</td>
+                <td>{about}</td>
             </tr>
         </tbody>
-    </table>
+        </>
 
     )
 }
