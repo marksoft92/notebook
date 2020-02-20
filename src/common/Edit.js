@@ -1,12 +1,13 @@
 import React from 'react';
+import { NavLink, Link, Route } from 'react-router-dom';
+const Edit = (props) => {
 
-import { NavLink } from 'react-router-dom';
-const Edit = () => {
+    const { id } = props.dataWorker
 
     return (
+        <Link to={"/edit"}>  <button onClick={() => props.editWorker(id)}>Edit</button></Link>
 
-        <></>
-    );
+    )
 }
 
 export default Edit;

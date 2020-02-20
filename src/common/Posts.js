@@ -1,10 +1,22 @@
 import React from 'react';
 import Result from '../common/Result.js';
+import Editor from './Editor.js';
 
 
-const Posts = (props) => {
+const Posts = ({ data, dataWorker, deleteItem, editWorker }) => {
 
-    const tasks = props.data.map(task => <Result key={task.id} items={task} deleteItem={props.deleteItem} />)
+    if (dataWorker != undefined) {
+        dataWorker.map(worker => <Editor items={worker} />)
+    }
+
+
+    const tasks = data.map(task => <Result
+        key={task.id}
+        items={task}
+        deleteItem={deleteItem}
+        editWorker={editWorker} />)
+
+
 
     return (
         <tbody>

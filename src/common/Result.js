@@ -5,12 +5,32 @@ const Result = (props) => {
 
 
 
-    const { avatarUrl, name, company, id } = props.items;
+    const { avatarUrl, name, company } = props.items;
 
 
     return (
         <>
-            <tr><td><img src={avatarUrl}></img></td> <td> {name}</td> <td>{company}</td><td><Delete id={props.items} deleteItem={props.deleteItem} /></td></tr>
+            <tr>
+                <td>
+                    <img src={avatarUrl}>
+                    </img>
+                </td>
+                <td>
+                    {name}
+                </td>
+                <td>
+                    {company}
+                </td>
+                <td>
+                    <Delete
+                        id={props.items}
+                        deleteItem={props.deleteItem} />
+                    <Edit
+                        dataWorker={props.items}
+                        editWorker={props.editWorker}
+                        worker={props.dataWorker} />
+                </td>
+            </tr>
         </>
     );
 }

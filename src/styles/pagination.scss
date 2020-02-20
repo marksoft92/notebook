@@ -1,0 +1,14 @@
+@import '../styles/settings.scss';
+
+
+*ul, ul li {
+	display: block;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.lix {
+	display: inline;
+	white-space: nowrap;
+}

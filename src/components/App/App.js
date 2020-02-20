@@ -8,7 +8,7 @@ import styles from './App.scss';
 
 import { BrowserRouter, Route } from 'react-router-dom';
 import { AnimatedSwitch } from 'react-router-transition';
-
+import AddWorker from '../../common/AddWorker';
 import Editor from '../../common/Editor';
 
 const App = () => (
@@ -22,6 +22,8 @@ const App = () => (
     >
       <Route exact path='/' component={HomeApp} />
       <Route exact path='/status' component={Editor} />
+      <Route exact path='/add' component={AddWorker} />
+      <Route exact path='/edit' component={Editor} />
 
     </AnimatedSwitch>
 

@@ -1,13 +1,33 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink, Link } from 'react-router-dom';
-const Editor = () => {
+
+const Editor = ({ items }) => {
+    console.log('x', items)
 
 
 
-    return (<button>
+    return (<table>
 
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Company</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>about</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
 
-        x</button>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
 
     )
 }
